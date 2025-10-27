@@ -10,10 +10,10 @@ const Banner = () => {
             <h1 className="text-4xl md:text-5xl font-bold">
               We Build
               <br />
-              <span className="text-[#9F62F2]"> Productive</span> Apps
+              <span className="text-[#9F62F2]"> Productive</span>Apps
             </h1>
             <p className="py-6">
-              At Appify.io , we craft innovative apps designed to make everyday
+              At Appify.io, we craft innovative apps designed to make everyday
               life simpler, smarter, and more exciting.Our goal is to turn your
               ideas into digital experiences that truly make an impact.
             </p>
