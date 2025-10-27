@@ -1,10 +1,12 @@
 import React from "react";
 import logo from "../assets/logo.png";
+import { Link, NavLink } from "react-router";
+import { Github } from 'lucide-react';
 
 const Navbar = () => {
   return (
-    <div>
-      <div className="navbar bg-white shadow-sm">
+    <div className="shadow-lg">
+      <div className="container mx-auto navbar bg-white ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,37 +30,37 @@ const Navbar = () => {
               tabIndex="-1"
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              <li>
-                <a>Home</a>
+              <li className="font-semibold mr-2">
+                <NavLink to="/">Home</NavLink>
               </li>
-              <li>
-                <a>Apps</a>
+              <li className="font-semibold mr-2">
+                <NavLink to="/apps">Apps</NavLink>
               </li>
-              <li>
-                <a>Installation</a>
+              <li className="font-semibold mr-2">
+                <NavLink to="/installation">Installation</NavLink>
               </li>
             </ul>
           </div>
-          <a className="text-2xl font-semibold text-purple-800 flex items-center">
+          <a className="text-2xl font-semibold text-[#632EE3] flex items-center">
             <img className="w-8" src={logo} alt="" />
-            <span>Appify.io</span>
+            <Link to="/">Appify.io</Link>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Home</a>
-            </li>
-            <li>
-              <a>Apps</a>
-            </li>
-            <li>
-              <a>Installation</a>
-            </li>
+            <li className="font-semibold mr-2">
+                <NavLink to="/">Home</NavLink>
+              </li>
+              <li className="font-semibold mr-2">
+                <NavLink to="/apps">Apps</NavLink>
+              </li>
+              <li className="font-semibold mr-2">
+                <NavLink to="/installation">Installation</NavLink>
+              </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Contribution</a>
+          <a className="btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white"> <Github /> Contribution</a>
         </div>
       </div>
     </div>
