@@ -1,86 +1,14 @@
 [
   {
-    "image": "https://ibb.co.com/0VFh5Dv3",
-    "title": "WhatsApp Messenger",
-    "companyName": "Meta Platforms, Inc.",
-    "id": 1,
-    "description": "Simple, secure messaging and calling for free across the world.",
-    "size": 45,
-    "reviews": 7400000,
-    "ratingAvg": 4.4,
-    "downloads": 7400000000,
-    "ratings": [
-      { "name": "1 star", "count": 500000 },
-      { "name": "2 star", "count": 800000 },
-      { "name": "3 star", "count": 1200000 },
-      { "name": "4 star", "count": 2100000 },
-      { "name": "5 star", "count": 3800000 }
-    ]
-  },
-  {
-    "image": "https://ibb.co.com/KjVpBCR9",
-    "title": "TikTok",
-    "companyName": "TikTok Pte. Ltd.",
-    "id": 2,
-    "description": "Short-form mobile video platform to watch, create and share content.",
-    "size": 55,
-    "reviews": 6200000,
-    "ratingAvg": 4.6,
-    "downloads": 6900000000,
-    "ratings": [
-      { "name": "1 star", "count": 600000 },
-      { "name": "2 star", "count": 900000 },
-      { "name": "3 star", "count": 1500000 },
-      { "name": "4 star", "count": 2300000 },
-      { "name": "5 star", "count": 2450000 }
-    ]
-  },
-  {
-    "image": "https://ibb.co.com/Q3JwSR8b",
-    "title": "Instagram",
-    "companyName": "Meta Platforms, Inc.",
-    "id": 3,
-    "description": "Photo & video sharing social network with stories, reels, and shopping features.",
-    "size": 50,
-    "reviews": 5900000,
-    "ratingAvg": 4.5,
-    "downloads": 5900000000,
-    "ratings": [
-      { "name": "1 star", "count": 550000 },
-      { "name": "2 star", "count": 850000 },
-      { "name": "3 star", "count": 1400000 },
-      { "name": "4 star", "count": 2400000 },
-      { "name": "5 star", "count": 1700000 }
-    ]
-  },
-  {
-    "image": "https://ibb.co.com/DfHcTCMf",
-    "title": "Facebook",
-    "companyName": "Meta Platforms, Inc.",
-    "id": 4,
-    "description": "Connect with friends, family and communities; share updates, photos and more.",
-    "size": 48,
-    "reviews": 5600000,
-    "ratingAvg": 4.3,
-    "downloads": 6800000000,
-    "ratings": [
-      { "name": "1 star", "count": 620000 },
-      { "name": "2 star", "count": 900000 },
-      { "name": "3 star", "count": 1600000 },
-      { "name": "4 star", "count": 2200000 },
-      { "name": "5 star", "count": 1280000 }
-    ]
-  },
-  {
-    "image": "https://ibb.co.com/5XYKPNF7",
+    "image": "https://i.ibb.co/LmVkccJ/youtube.jpg",
     "title": "YouTube",
     "companyName": "Google LLC",
-    "id": 5,
+    "id": 1,
     "description": "Watch, upload and share videos; a global video-platform for every topic.",
     "size": 60,
     "reviews": 6300000,
     "ratingAvg": 4.7,
-    "downloads": 8000000000,
+    "downloads": 800000000,
     "ratings": [
       { "name": "1 star", "count": 450000 },
       { "name": "2 star", "count": 700000 },
@@ -90,33 +18,69 @@
     ]
   },
   {
-    "image": "https://ibb.co.com/7d7NMvvS",
-    "title": "Telegram Messenger",
-    "companyName": "Telegram FZ-LLC",
-    "id": 6,
-    "description": "Cloud-based messaging with focus on speed & security; large groups, channels and bots.",
-    "size": 40,
-    "reviews": 4100000,
+    "image": "https://i.ibb.co/m5m10gZS/whatsapp.jpg",
+    "title": "WhatsApp Messenger",
+    "companyName": "Meta Platforms, Inc.",
+    "id": 2,
+    "description": "Simple, secure messaging and calling for free across the world.",
+    "size": 45,
+    "reviews": 7400000,
     "ratingAvg": 4.4,
-    "downloads": 4090000000,
+    "downloads": 740000000,
     "ratings": [
-      { "name": "1 star", "count": 380000 },
-      { "name": "2 star", "count": 580000 },
-      { "name": "3 star", "count": 1000000 },
-      { "name": "4 star", "count": 1200000 },
-      { "name": "5 star", "count": 1310000 }
+      { "name": "1 star", "count": 500000 },
+      { "name": "2 star", "count": 800000 },
+      { "name": "3 star", "count": 1200000 },
+      { "name": "4 star", "count": 2100000 },
+      { "name": "5 star", "count": 3800000 }
     ]
   },
   {
-    "image": "https://ibb.co.com/m5f0sGz2",
+    "image": "https://i.ibb.co/qL4mZJ1j/tiktok.jpg",
+    "title": "TikTok",
+    "companyName": "TikTok Pte. Ltd.",
+    "id": 3,
+    "description": "Short-form mobile video platform to watch, create and share content.",
+    "size": 55,
+    "reviews": 6200000,
+    "ratingAvg": 4.6,
+    "downloads": 690000000,
+    "ratings": [
+      { "name": "1 star", "count": 600000 },
+      { "name": "2 star", "count": 900000 },
+      { "name": "3 star", "count": 1500000 },
+      { "name": "4 star", "count": 2300000 },
+      { "name": "5 star", "count": 2450000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/60MYqJx4/facebook.jpg",
+    "title": "Facebook",
+    "companyName": "Meta Platforms, Inc.",
+    "id": 4,
+    "description": "Connect with friends, family and communities; share updates, photos and more.",
+    "size": 48,
+    "reviews": 5600000,
+    "ratingAvg": 4.3,
+    "downloads": 680000000,
+    "ratings": [
+      { "name": "1 star", "count": 620000 },
+      { "name": "2 star", "count": 900000 },
+      { "name": "3 star", "count": 1600000 },
+      { "name": "4 star", "count": 2200000 },
+      { "name": "5 star", "count": 1280000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/cSfYB5FW/google.jpg",
     "title": "Google",
     "companyName": "Google LLC",
-    "id": 7,
+    "id": 5,
     "description": "Search the world's information, including webpages, images, videos and more.",
     "size": 42,
     "reviews": 5200000,
     "ratingAvg": 4.5,
-    "downloads": 6000000000,
+    "downloads": 600000000,
     "ratings": [
       { "name": "1 star", "count": 400000 },
       { "name": "2 star", "count": 600000 },
@@ -126,15 +90,33 @@
     ]
   },
   {
-    "image": "https://ibb.co.com/99DNXWNL",
+    "image": "https://i.ibb.co/pBznggBv/instagram.jpg",
+    "title": "Instagram",
+    "companyName": "Meta Platforms, Inc.",
+    "id": 6,
+    "description": "Photo & video sharing social network with stories, reels, and shopping features.",
+    "size": 50,
+    "reviews": 5900000,
+    "ratingAvg": 4.5,
+    "downloads": 590000000,
+    "ratings": [
+      { "name": "1 star", "count": 550000 },
+      { "name": "2 star", "count": 850000 },
+      { "name": "3 star", "count": 1400000 },
+      { "name": "4 star", "count": 2400000 },
+      { "name": "5 star", "count": 1700000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/gbKTR7Bh/gmail.jpg",
     "title": "Gmail",
     "companyName": "Google LLC",
-    "id": 8,
+    "id": 7,
     "description": "Secure, fast and easy email with smart spam protection and intuitive interface.",
     "size": 38,
     "reviews": 4800000,
     "ratingAvg": 4.4,
-    "downloads": 5000000000,
+    "downloads": 500000000,
     "ratings": [
       { "name": "1 star", "count": 350000 },
       { "name": "2 star", "count": 550000 },
@@ -144,7 +126,25 @@
     ]
   },
   {
-    "image": "https://ibb.co.com/0RHJqMW1",
+    "image": "https://i.ibb.co/7dVQgWzR/telegram.jpg",
+    "title": "Telegram Messenger",
+    "companyName": "Telegram FZ-LLC",
+    "id": 8,
+    "description": "Cloud-based messaging with focus on speed & security; large groups, channels and bots.",
+    "size": 40,
+    "reviews": 4100000,
+    "ratingAvg": 4.4,
+    "downloads": 409000000,
+    "ratings": [
+      { "name": "1 star", "count": 380000 },
+      { "name": "2 star", "count": 580000 },
+      { "name": "3 star", "count": 1000000 },
+      { "name": "4 star", "count": 1200000 },
+      { "name": "5 star", "count": 1310000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/YB1THJsK/twitter.jpg",
     "title": "X (Twitter)",
     "companyName": "X Corp.",
     "id": 9,
@@ -152,7 +152,7 @@
     "size": 48,
     "reviews": 4700000,
     "ratingAvg": 4.1,
-    "downloads": 2200000000,
+    "downloads": 220000000,
     "ratings": [
       { "name": "1 star", "count": 600000 },
       { "name": "2 star", "count": 700000 },
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "image": "https://ibb.co.com/TqKh4hzZ",
+    "image": "https://i.ibb.co/6LP56N4/linkedin.jpg",
     "title": "LinkedIn",
     "companyName": "LinkedIn Corporation",
     "id": 10,
@@ -170,7 +170,7 @@
     "size": 50,
     "reviews": 3600000,
     "ratingAvg": 4.3,
-    "downloads": 1900000000,
+    "downloads": 190000000,
     "ratings": [
       { "name": "1 star", "count": 400000 },
       { "name": "2 star", "count": 500000 },
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "image": "https://ibb.co.com/VWT0mZFt",
+    "image": "https://i.ibb.co/LDG07wtf/skype.jpg",
     "title": "Skype",
     "companyName": "Microsoft Corporation",
     "id": 11,
@@ -188,7 +188,7 @@
     "size": 44,
     "reviews": 3200000,
     "ratingAvg": 4.2,
-    "downloads": 1500000000,
+    "downloads": 150000000,
     "ratings": [
       { "name": "1 star", "count": 300000 },
       { "name": "2 star", "count": 450000 },
@@ -198,7 +198,7 @@
     ]
   },
   {
-    "image": "https://ibb.co.com/rfxSBVyY",
+    "image": "https://i.ibb.co/zTrHhZzR/photoshop.jpg",
     "title": "Adobe Photoshop",
     "companyName": "Adobe Inc.",
     "id": 12,
@@ -206,7 +206,7 @@
     "size": 65,
     "reviews": 2800000,
     "ratingAvg": 4.6,
-    "downloads": 1200000000,
+    "downloads": 120000000,
     "ratings": [
       { "name": "1 star", "count": 200000 },
       { "name": "2 star", "count": 300000 },

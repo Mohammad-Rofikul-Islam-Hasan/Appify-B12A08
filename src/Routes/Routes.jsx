@@ -3,6 +3,7 @@ import MainLayout from "../Layouts/MainLayout";
 import Apps from "../Pages/Apps";
 import Home from "../Pages/Home";
 import ErrorPage from "../Pages/ErrorPage";
+import Installation from "../Pages/Installation";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/installation",
-        element: <p>Installation</p>,
+        element: <Installation></Installation>
       },
     ],
   },

@@ -41,10 +41,10 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="text-2xl font-semibold text-[#632EE3] flex items-center">
+          <div className="text-2xl font-semibold text-[#632EE3] flex items-center">
             <img className="w-8" src={logo} alt="" />
             <Link to="/">Appify.io</Link>
-          </a>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
