@@ -1,18 +1,19 @@
 import React from "react";
-import { Link } from "react-router";
+import notFoundImg from "../assets/App-Error.png";
 import { ArrowLeft } from "lucide-react";
-import errorImg from "../assets/error-404.png";
+import { Link } from "react-router";
 
-const ErrorPage = () => {
+const AppsNotFound = () => {
   return (
-    <div className="bg-base-200">
+    <div className="pb-10 bg-base-200">
       <div className="hero container mx-auto min-h-[calc(100vh-225px)] ">
         <div className="hero-content text-center">
           <div className="max-w-md">
-            <img className="w-3/4 mx-auto" src={errorImg} alt="" />
-            <h1 className="text-3xl py-5 font-bold">Oops, page not found!</h1>
+            <img className="w-3/4 mx-auto" src={notFoundImg} alt="" />
+            <h1 className="text-3xl py-5 font-bold">Oops, Apps not found!</h1>
             <p className="py-6">
-              The page you are looking for is not available.
+              The App you are requesting is not found on our system. please try
+              another apps.
             </p>
             <Link
               to="/"
@@ -28,4 +29,4 @@ const ErrorPage = () => {
   );
 };
 
-export default ErrorPage;
+export default AppsNotFound;
