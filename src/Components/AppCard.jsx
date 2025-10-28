@@ -2,12 +2,10 @@ import React from "react";
 import { ArrowDownToLine, Star } from "lucide-react";
 
 const AppCard = ({ card }) => {
-
-
   const { image, title, companyName, ratingAvg, downloads } = card;
   return (
     <div>
-      <div className="card bg-base-100 h-full shadow-sm">
+      <div className="card bg-base-100 h-full shadow-xl">
         <figure className="px-5 pt-5">
           <img src={image} alt="Shoes" className="rounded-xl" />
         </figure>

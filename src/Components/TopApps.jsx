@@ -15,7 +15,7 @@ const TopApps = () => {
     <div className="bg-base-200">
       <div className="container mx-auto flex flex-col justify-center items-center">
         <div className="text-center py-10">
-          <h1 className="text-3xl md:text-5xl font-bold">Trending Apps</h1>
+          <h1 className="text-3xl md:text-4xl font-bold">Trending Apps</h1>
           <p className="mt-5 text-gray-500">
             Explore All Trending Apps on the Market developed by us.
           </p>
