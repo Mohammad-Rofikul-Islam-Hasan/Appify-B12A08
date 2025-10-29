@@ -9,7 +9,7 @@ const TopApps = () => {
 
   const topAppsData = appsData.slice(0,8)
 
-  console.log(appsData);
+  // console.log(appsData);
 
   return (
     <div className="bg-base-200">

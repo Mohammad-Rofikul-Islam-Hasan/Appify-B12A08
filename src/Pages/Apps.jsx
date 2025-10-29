@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import useAppsData from "../hooks/useAppsData";
 import AppCard from "../Components/AppCard";
 import AppsNotFound from "../Components/AppsNotFound";
+import Spinner from "../Components/Spinner";
 
 const Apps = () => {
-  const { appsData } = useAppsData();
+  const { appsData,loading } = useAppsData();
   const [search, setSearch] = useState("");
+
+      if (loading) return <Spinner></Spinner>;
 
   const searchedText = search.trim().toLocaleLowerCase();
 
@@ -14,6 +17,8 @@ const Apps = () => {
         App.title.toLocaleLowerCase().includes(searchedText)
       )
     : appsData;
+
+
 
   return (
     <div className="bg-base-200">
