@@ -53,7 +53,8 @@ const Banner = () => {
                 Google Play
               </a>
               <a
-                href="https://www.apple.com/app-store/" target='_blank'
+                href="https://www.apple.com/app-store/"
+                target="_blank"
                 className="btn bg-white text-black border-gray-300 shadow-2xl w-full flex-1"
               >
                 <svg

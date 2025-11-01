@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import InstallationCard from "../Components/InstallationCard";
+import { ToastContainer, toast } from "react-toastify";
+import AppsNotFound from "../Components/AppsNotFound";
 
 const Installation = () => {
   const [installed, setInstalled] = useState([]);
   const [sort, setSort] = useState("none");
-
-  console.log(installed);
 
   useEffect(() => {
     const installedApp = JSON.parse(localStorage.getItem("installedList"));
@@ -13,7 +13,8 @@ const Installation = () => {
   }, []);
 
   const handleUninstall = (id) => {
-    alert("Uninstalling...");
+    toast.warning("Uninstalling...");
+
     const existingInstalledApps = JSON.parse(
       localStorage.getItem("installedList")
     );
@@ -69,6 +70,7 @@ const Installation = () => {
                 <option value="high-low">Downloads: High - Low</option>
               </select>
             </label>
+            
           </div>
 
           <div className="space-y-5 px-4 Py-10">
@@ -83,8 +85,21 @@ const Installation = () => {
                 </InstallationCard>
               ))}
           </div>
+          <div>{installed.length === 0 && <h3 className="text-3xl font-bold text-center py-20">Opps! No Installed Apps Found.</h3>}</div>
         </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 };

@@ -60,7 +60,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white"> <Github /> Contribution</a>
+          <Link to="https://github.com/Mohammad-Rofikul-Islam-Hasan" target="_blank" className="btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white"> <Github /> Contribution</Link>
         </div>
       </div>
     </div>

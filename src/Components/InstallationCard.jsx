@@ -1,9 +1,15 @@
 import React from 'react';
 import downloadIcon from "../assets/icon-downloads.png"
 import ratingIcon from "../assets/icon-ratings.png"
+import useAppsData from '../hooks/useAppsData';
+import Spinner from './Spinner';
 
 const InstallationCard = ({App, handleUninstall}) => {
     const {id, image, title, companyName, ratingAvg, downloads, size } = App;
+
+     const {loading} = useAppsData()
+
+     loading && <Spinner></Spinner>
 
   return (
     <div>

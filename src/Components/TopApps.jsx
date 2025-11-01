@@ -3,11 +3,12 @@ import React from "react";
 import useAppsData from "../hooks/useAppsData";
 import AppCard from "./AppCard";
 import { Link } from "react-router";
+import Spinner from "./Spinner";
 
 const TopApps = () => {
-  const { appsData } = useAppsData();
+  const { appsData, loading } = useAppsData();
 
-  const topAppsData = appsData.slice(0,8)
+  const topAppsData = appsData.slice(0, 8);
 
   // console.log(appsData);
 
@@ -21,12 +22,21 @@ const TopApps = () => {
           </p>
         </div>
 
-        <div className="px-4 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {topAppsData.map((card) => (
-            <AppCard key={card.id} card={card}></AppCard>
-          ))}
-        </div>
-        <Link to="/apps" className="btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white mb-10">Show All</Link>
+        {loading ? (
+          <Spinner></Spinner>
+        ) : (
+          <div className="px-4 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {topAppsData.map((card) => (
+              <AppCard key={card.id} card={card}></AppCard>
+            ))}
+          </div>
+        )}
+        <Link
+          to="/apps"
+          className="btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white mb-10"
+        >
+          Show All
+        </Link>
       </div>
     </div>
   );

@@ -14,6 +14,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { ToastContainer, toast } from "react-toastify";
 
 const AppDetails = () => {
   const { appsData, loading } = useAppsData();
@@ -37,24 +38,25 @@ const AppDetails = () => {
   } = findApp;
 
   const handleInstalled = () => {
-    
-
-    const existingInstalledList = JSON.parse(localStorage.getItem("installedList"));
+    const existingInstalledList = JSON.parse(
+      localStorage.getItem("installedList")
+    );
     let updatedInstalledList = [];
     if (existingInstalledList) {
-      const duplicate = existingInstalledList.some(App => App.id === findApp.id)
-      if(duplicate) {
-        alert("Already Installed")
-        return
+      const duplicate = existingInstalledList.some(
+        (App) => App.id === findApp.id
+      );
+      if (duplicate) {
+        toast.error(`${title} Already Installed`);
+        return;
       }
 
-      updatedInstalledList = [...existingInstalledList,findApp]
-    }
-    else{
-       updatedInstalledList.push(findApp)
+      updatedInstalledList = [...existingInstalledList, findApp];
+    } else {
+      updatedInstalledList.push(findApp);
     }
     setInstalled(true);
-    alert("Installing...");
+    toast.success(`${title} Installing...`);
 
     localStorage.setItem("installedList", JSON.stringify(updatedInstalledList));
   };
@@ -125,6 +127,19 @@ const AppDetails = () => {
         <h3 className="text-2xl font-bold text-justify">Description:</h3>
         <p>{description}</p>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        
+      />
     </div>
   );
 };
