@@ -4,7 +4,7 @@ import ratingIcon from "../assets/icon-ratings.png";
 import downloadIcon from "../assets/icon-downloads.png";
 import { Link } from "react-router";
 
-const AppCard = ({ card }) => {
+const AppCard = ({ card}) => {
   const {id, image, title, companyName, ratingAvg, downloads } = card;
     
   

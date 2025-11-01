@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import useAppsData from "../hooks/useAppsData";
 import { useParams } from "react-router";
 import Spinner from "../Components/Spinner";
@@ -9,7 +9,6 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
-  ComposedChart,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -18,6 +17,7 @@ import {
 
 const AppDetails = () => {
   const { appsData, loading } = useAppsData();
+  const [installed, setInstalled] = useState(false);
   const params = useParams();
 
   const findApp = appsData.find((app) => app.id === Number(params.id));
@@ -25,7 +25,6 @@ const AppDetails = () => {
   if (loading) return <Spinner></Spinner>;
 
   const {
-    id,
     image,
     title,
     companyName,
@@ -36,6 +35,29 @@ const AppDetails = () => {
     downloads,
     ratings,
   } = findApp;
+
+  const handleInstalled = () => {
+    
+
+    const existingInstalledList = JSON.parse(localStorage.getItem("installedList"));
+    let updatedInstalledList = [];
+    if (existingInstalledList) {
+      const duplicate = existingInstalledList.some(App => App.id === findApp.id)
+      if(duplicate) {
+        alert("Already Installed")
+        return
+      }
+
+      updatedInstalledList = [...existingInstalledList,findApp]
+    }
+    else{
+       updatedInstalledList.push(findApp)
+    }
+    setInstalled(true);
+    alert("Installing...");
+
+    localStorage.setItem("installedList", JSON.stringify(updatedInstalledList));
+  };
 
   return (
     <div className="bg-base-100 container mx-auto mt-10 px-4">
@@ -69,8 +91,14 @@ const AppDetails = () => {
               <h3 className="text-2xl font-bold">{reviews / 1000000}M</h3>
             </div>
           </div>
-          <button className="btn btn-success text-lg text-white">
-            Install Now ({size}MB)
+          <button
+            onClick={handleInstalled}
+            disabled={installed}
+            className={`btn btn-success text-lg ${
+              installed ? "text-black" : "text-white"
+            } `}
+          >
+            {installed ? "Installed" : `Install Now (${size}MB)`}
           </button>
         </div>
       </div>
@@ -81,7 +109,7 @@ const AppDetails = () => {
         <h1 className="text-3xl font-bold">Ratings</h1>
         <div className="mt-5 w-full h-[300px]">
           <ResponsiveContainer width="100%" height="100%">
-            <BarChart layout="vertical" className="" data={ratings}>
+            <BarChart layout="vertical" data={ratings}>
               <XAxis type="number" />
               <YAxis reversed dataKey="name" type="category" stroke="#8884d8" />
               <Tooltip />

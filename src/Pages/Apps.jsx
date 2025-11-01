@@ -8,7 +8,7 @@ const Apps = () => {
   const { appsData,loading } = useAppsData();
   const [search, setSearch] = useState("");
 
-      if (loading) return <Spinner></Spinner>;
+      
 
   const searchedText = search.trim().toLocaleLowerCase();
 
@@ -64,11 +64,13 @@ const Apps = () => {
             </label>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pb-10 px-4">
+        {
+          loading? <Spinner></Spinner> : <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pb-10 px-4">
           {searchedApps.map((card) => (
             <AppCard key={card.id} card={card}></AppCard>
           ))}
         </div>
+        }
         <div>{searchedApps.length === 0 && <AppsNotFound></AppsNotFound>}</div>
       </div>
     </div>
