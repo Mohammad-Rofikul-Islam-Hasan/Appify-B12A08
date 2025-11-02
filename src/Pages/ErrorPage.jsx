@@ -5,7 +5,7 @@ import errorImg from "../assets/error-404.png";
 
 const ErrorPage = () => {
   return (
-    <div className="bg-base-200">
+    <div className="">
       <div className="hero container mx-auto min-h-[calc(100vh-225px)] ">
         <div className="hero-content text-center">
           <div className="max-w-md">

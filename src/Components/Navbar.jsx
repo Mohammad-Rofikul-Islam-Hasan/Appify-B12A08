@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router";
 import { Github } from 'lucide-react';
 
 const Navbar = () => {
+
   return (
     <div className="shadow-lg">
       <div className="container mx-auto navbar bg-white ">

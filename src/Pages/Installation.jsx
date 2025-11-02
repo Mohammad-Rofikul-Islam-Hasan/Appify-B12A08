@@ -1,19 +1,35 @@
 import React, { useEffect, useState } from "react";
 import InstallationCard from "../Components/InstallationCard";
 import { ToastContainer, toast } from "react-toastify";
-import AppsNotFound from "../Components/AppsNotFound";
+import useAppsData from "../hooks/useAppsData";
+import Spinner from "../Components/Spinner";
+
 
 const Installation = () => {
   const [installed, setInstalled] = useState([]);
   const [sort, setSort] = useState("none");
+  const { loading } = useAppsData();
+  const [showSpinner, setShowSpinner] = useState(true);
 
   useEffect(() => {
     const installedApp = JSON.parse(localStorage.getItem("installedList"));
     installedApp && setInstalled(installedApp);
+
+    const timer = setTimeout(() => {
+      setShowSpinner(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
 
+  if (loading || showSpinner) {
+    return <Spinner></Spinner>;
+  }
+
   const handleUninstall = (id) => {
-    toast.warning("Uninstalling...");
+    const appUninstall = installed.find((App) => App.id === id);
+
+    toast.warning(`${appUninstall.title} Uninstalling...`);
 
     const existingInstalledApps = JSON.parse(
       localStorage.getItem("installedList")
@@ -70,9 +86,7 @@ const Installation = () => {
                 <option value="high-low">Downloads: High - Low</option>
               </select>
             </label>
-            
           </div>
-
           <div className="space-y-5 px-4 Py-10">
             {installed &&
               handleSort.map((App) => (
@@ -85,7 +99,13 @@ const Installation = () => {
                 </InstallationCard>
               ))}
           </div>
-          <div>{installed.length === 0 && <h3 className="text-3xl font-bold text-center py-20">Opps! No Installed Apps Found.</h3>}</div>
+          <div>
+            {installed.length === 0 && (
+              <h3 className="text-3xl font-bold text-center py-20">
+                Opps! No Installed Apps Found.
+              </h3>
+            )}
+          </div>
         </div>
       </div>
       <ToastContainer

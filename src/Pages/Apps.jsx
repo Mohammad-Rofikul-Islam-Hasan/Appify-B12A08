@@ -1,28 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useAppsData from "../hooks/useAppsData";
 import AppCard from "../Components/AppCard";
 import AppsNotFound from "../Components/AppsNotFound";
 import Spinner from "../Components/Spinner";
 
 const Apps = () => {
-  const { appsData,loading } = useAppsData();
+  const { appsData, loading } = useAppsData();
   const [search, setSearch] = useState("");
+  const [showSpinner, setShowSpinner] = useState(true);
+  const [searchLoading, setSearchLoading] = useState(false);
 
-      
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSpinner(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
-  const searchedText = search.trim().toLocaleLowerCase();
+  useEffect(() => {
+    const trimmed = search.trim();
+    if (trimmed === "") {
+      setSearchLoading(false);
+      return;
+    }
+
+    setSearchLoading(true);
+    const timer = setTimeout(() => {
+      setSearchLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [search]);
+
+  const searchedText = search.trim().toLowerCase();
 
   const searchedApps = searchedText
-    ? appsData.filter((App) =>
-        App.title.toLocaleLowerCase().includes(searchedText)
-      )
+    ? appsData.filter((App) => App.title.toLowerCase().includes(searchedText))
     : appsData;
 
-
+  if (loading || showSpinner) {
+    return <Spinner></Spinner>;
+  }
 
   return (
     <div className="bg-base-200">
-      <div className="container mx-auto ">
+      <div className="container mx-auto">
         <div className="text-center py-10 px-4">
           <h1 className="text-3xl md:text-4xl font-bold">
             Our All Applications
@@ -31,9 +53,9 @@ const Apps = () => {
             Explore All Apps on the Market developed by us. We code for Millions
           </p>
         </div>
+
         <div className="flex justify-between items-center px-4 lg:px-10">
-          <h3 className=" mb-2 text-xl font-semibold">
-            {" "}
+          <h3 className="mb-2 text-xl font-semibold">
             Apps found ({searchedApps.length})
           </h3>
           <div className="mb-2">
@@ -64,17 +86,19 @@ const Apps = () => {
             </label>
           </div>
         </div>
-        {
-          loading? <Spinner></Spinner> : <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pb-10 px-4">
-          {searchedApps.map((card) => (
-            <AppCard key={card.id} card={card}></AppCard>
-          ))}
-          
+        <div className="pb-10 px-4 min-h-[200px] flex justify-center items-center">
+          {searchLoading ? (
+            <Spinner></Spinner>
+          ) : searchedApps.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
+              {searchedApps.map((card) => (
+                <AppCard key={card.id} card={card} />
+              ))}
+            </div>
+          ) : (
+            <AppsNotFound />
+          )}
         </div>
-        <div>{searchedApps.length === 0 && <AppsNotFound></AppsNotFound>}</div>
-        </div>
-        }
       </div>
     </div>
   );
